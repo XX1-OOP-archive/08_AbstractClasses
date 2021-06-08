@@ -9,11 +9,24 @@ public class App {
         ausgabe("Fläche Kreis: " + circle.area());
         ausgabe("Fläche Rechteck: " + rectangle.area());
         ausgabe("Fläche Dreieck: " + triangle.area());
-    
+        ausgabe("---- Differenzen -------");
+        ausgabe("Diff. r/t: " + areaDiff(rectangle, triangle));
+        ausgabe("Diff. r/c: " + areaDiff(rectangle, circle));
     
     }
 
+    // Problem: Aufwand/Nutzen : Linear!!!!
+    // 1966 "HELP!" :: "Hi, Hi, Hilfe!"
 
+    // Rechteck - Dreieck
+    public static double areaDiff(Rectangle r, Circle c) {
+        return r.area() - c.area();
+    }
+
+    // Rechteck - Dreieck
+    public static double areaDiff(Rectangle r, Triangle t) {
+        return r.area() - t.area();
+    }
 
     public static void ausgabe(String outStr) {
         System.out.println(outStr);
